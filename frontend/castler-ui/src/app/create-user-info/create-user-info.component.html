@@ -1,0 +1,23 @@
+<h3>Add User Info</h3>
+<mat-card class="card">
+  <form [formGroup]="userInfoForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Name: </mat-label>
+      <input matInput placeholder="Name" formControlName="name" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Age: </mat-label>
+      <input type="number" matInput placeholder="Age" formControlName="age" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Address: </mat-label>
+      <input matInput placeholder="Address" formControlName="address" />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" [disabled]="!userInfoForm.valid">
+      Submit
+    </button>
+  </form>
+</mat-card>
